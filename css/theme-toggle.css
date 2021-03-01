@@ -1,0 +1,17 @@
+.theme-button {
+  cursor: pointer;
+  border: 1px solid var(--theme-primary-pair);
+  background: transparent;
+  color: var(--theme-primary-pair);
+  border-radius: var(--theme-border-radius);
+}
+.theme-button:hover {
+  text-decoration: underline;
+}
+
+.theme--dark .theme-button::after {
+  content: ' on';
+}
+.theme--plain .theme-button::after {
+  content: ' out';
+}
