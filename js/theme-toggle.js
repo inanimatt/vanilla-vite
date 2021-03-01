@@ -22,4 +22,9 @@ const setInitialTheme = () => {
   body.classList.replace('theme--plain', `theme--${theme}`);
 };
 
-setInitialTheme();
+document.addEventListener('readystatechange', () => {
+  if (document.readyState === 'loading') {
+    return;
+  }
+  setInitialTheme();
+});
